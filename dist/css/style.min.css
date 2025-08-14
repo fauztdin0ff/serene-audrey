@@ -291,6 +291,7 @@ Menu
 .menu__grid {
   column-count: 2;
   height: 472px;
+  margin-left: 56px;
 }
 .menu__group:not(:first-child) {
   margin-top: 24px;
@@ -330,8 +331,9 @@ Menu
   margin-bottom: 12px;
 }
 .menu__group-list li {
-  max-width: 190px;
-  margin-right: 32px;
+  width: 190px;
+  margin-right: 15px;
+  line-height: 1;
 }
 .menu__group-list li:not(:last-child) {
   margin-bottom: 12px;
@@ -449,7 +451,8 @@ Menu
   gap: 50px;
 }
 .footer__menu-col {
-  flex: 1 1 200px;
+  flex: 0 1 190px;
+  min-width: 190px;
 }
 .footer__menu-title {
   color: rgb(0, 0, 0);
@@ -461,16 +464,18 @@ Menu
   text-align: left;
   margin-bottom: 12px;
 }
+.footer__menu-list li:not(:last-child) {
+  margin-bottom: 12px;
+}
 .footer__menu-list a {
-  display: inline-block;
+  display: block;
   color: rgba(0, 0, 0, 0.8);
   font-family: Mulish;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 135%;
   letter-spacing: 0px;
   text-transform: capitalize;
-  margin-bottom: 12px;
   position: relative;
 }
 .footer__menu-list a::after {
